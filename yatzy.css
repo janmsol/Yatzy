@@ -1,0 +1,23 @@
+body {
+    padding: 50px;
+    background: #62cfff;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: #000000;
+    margin: 50px;
+}
+
+.rollsLeft {
+    border: #62cfff;
+    background: #62cfff;
+}
+
+[placeholder=hold]{
+    border: 1px solid #ff0000;
+}
+
+[placeholder=set]{
+    border: 2px solid #3fff38;
+}

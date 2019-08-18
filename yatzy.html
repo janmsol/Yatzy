@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.3.1.js" ></script>
+    <script src="yatzy.js"></script>
+    <link rel="stylesheet" href="yatzy.css"/>
+    <title>Yatzy</title>
+</head>
+<body>
+    <div align="center">
+        <input id="dice1" type="image" src="dices/dice_6.PNG" alt="Submit" width="48" height="48" value="6"/>
+        <input id="dice2" type="image" src="dices/dice_6.PNG" alt="Submit" width="48" height="48" value="6"/>
+        <input id="dice3" type="image" src="dices/dice_6.PNG" alt="Submit" width="48" height="48" value="6"/>
+        <input id="dice4" type="image" src="dices/dice_6.PNG" alt="Submit" width="48" height="48" value="6"/>
+        <input id="dice5" type="image" src="dices/dice_6.PNG" alt="Submit" width="48" height="48" value="6"/>
+        <div align="center">
+            <input id="roll" type="submit" value="roll the dices"/>
+        </div>
+        <div align="center">
+            <input title="RollsLeft" class="rollsLeft" id="leftRoll" type="text" readonly="readonly" value="Rolls Left" dir="rtl"/>
+            <input title="RollsLeft" class="rollsLeft" id="numRoll" type="text" readonly="readonly" value=""/>
+        </div>
+
+
+        <div align="left">
+            <h1>Scoreboard</h1>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly"/>
+            <input title="yatzy" id="player1" type="text" readonly="readonly" value="Player 1"/>
+            <input title="yatzy" id="player2" type="text" readonly="readonly" value="Player 2"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Ones"/>
+            <input title="yatzy" id="player1One" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2One" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Twos"/>
+            <input title="yatzy" id="player1Two" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Two" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Threes"/>
+            <input title="yatzy" id="player1Three" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Three" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Fours"/>
+            <input title="yatzy" id="player1Four" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Four" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Fives"/>
+            <input title="yatzy" id="player1Five" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Five" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Sixes"/>
+            <input title="yatzy" id="player1Six" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Six" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Upper Sum"/>
+            <input title="yatzy" id="player1UpSum" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2UpSum" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Bonus"/>
+            <input title="yatzy" id="player1Bonus" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Bonus" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="One Pair"/>
+            <input title="yatzy" id="player1Pair" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Pair" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Two Pairs"/>
+            <input title="yatzy" id="player1Pair2" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Pair2" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="3 of a Kind"/>
+            <input title="yatzy" id="player1Same3" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Same3" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="4 of a Kind"/>
+            <input title="yatzy" id="player1Same4" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Same4" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Full House"/>
+            <input title="yatzy" id="player1House" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2House" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Chance"/>
+            <input title="yatzy" id="player1Chance" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Chance" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Yatzy"/>
+            <input title="yatzy" id="player1Yatzy" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Yatzy" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+        <div align="left">
+            <input title="yatzy" type="text" readonly="readonly" value="Sum"/>
+            <input title="yatzy" id="player1Sum" type="text" readonly="readonly" dir="rtl"/>
+            <input title="yatzy" id="player2Sum" type="text" readonly="readonly" dir="rtl"/>
+        </div>
+    </div>
+    <script>
+        var numRoll = document.getElementById("numRoll");
+        numRoll.value = 3-numberOfRolls;
+
+        var dice1 = document.getElementById("dice1");
+        var dice2 = document.getElementById("dice2");
+        var dice3 = document.getElementById("dice3");
+        var dice4 = document.getElementById("dice4");
+        var dice5 = document.getElementById("dice5");
+
+        var player1One = document.getElementById("player1One");
+        var player2One = document.getElementById("player2One");
+        var player1Two = document.getElementById("player1Two");
+        var player2Two = document.getElementById("player2Two");
+        var player1Three = document.getElementById("player1Three");
+        var player2Three = document.getElementById("player2Three");
+        var player1Four = document.getElementById("player1Four");
+        var player2Four = document.getElementById("player2Four");
+        var player1Five = document.getElementById("player1Five");
+        var player2Five = document.getElementById("player2Five");
+        var player1Six = document.getElementById("player1Six");
+        var player2Six = document.getElementById("player2Six");
+        var player1Pair = document.getElementById("player1Pair");
+        var player2Pair = document.getElementById("player2Pair");
+        var player1Pair2 = document.getElementById("player1Pair2");
+        var player2Pair2 = document.getElementById("player2Pair2");
+        var player1Same3 = document.getElementById("player1Same3");
+        var player2Same3 = document.getElementById("player2Same3");
+        var player1Same4 = document.getElementById("player1Same4");
+        var player2Same4 = document.getElementById("player2Same4");
+        var player1House = document.getElementById("player1House");
+        var player2House = document.getElementById("player2House");
+        var player1Chance = document.getElementById("player1Chance");
+        var player2Chance = document.getElementById("player2Chance");
+        var player1Yatzy = document.getElementById("player1Yatzy");
+        var player2Yatzy = document.getElementById("player2Yatzy");
+
+
+        var player1UpSum = document.getElementById("player1UpSum");
+        var player2UpSum = document.getElementById("player2UpSum");
+        var player1Bonus = document.getElementById("player1Bonus");
+        var player2Bonus = document.getElementById("player2Bonus");
+        var player1Sum = document.getElementById("player1Sum");
+        var player2Sum = document.getElementById("player2Sum");
+
+        document.getElementById("roll").onclick = rollDice;
+
+        dice1.onclick = holdDice1;
+        dice2.onclick = holdDice2;
+        dice3.onclick = holdDice3;
+        dice4.onclick = holdDice4;
+        dice5.onclick = holdDice5;
+
+        player1One.onclick = setplayer1One;
+        player2One.onclick = setplayer2One;
+        player1Two.onclick = setplayer1Two;
+        player2Two.onclick = setplayer2Two;
+        player1Three.onclick = setplayer1Three;
+        player2Three.onclick = setplayer2Three;
+        player1Four.onclick = setplayer1Four;
+        player2Four.onclick = setplayer2Four;
+        player1Five.onclick = setplayer1Five;
+        player2Five.onclick = setplayer2Five;
+        player1Six.onclick = setplayer1Six;
+        player2Six.onclick = setplayer2Six;
+        player1Pair.onclick = setplayer1Pair;
+        player2Pair.onclick = setplayer2Pair;
+        player1Pair2.onclick = setplayer1Pair2;
+        player2Pair2.onclick = setplayer2Pair2;
+        player1Same3.onclick = setplayer1Same3;
+        player2Same3.onclick = setplayer2Same3;
+        player1Same4.onclick = setplayer1Same4;
+        player2Same4.onclick = setplayer2Same4;
+
+        player1House.onclick = setplayer1House;
+        player2House.onclick = setplayer2House;
+        player1Chance.onclick = setplayer1Chance;
+        player2Chance.onclick = setplayer2Chance;
+        player1Yatzy.onclick = setplayer1Yatzy;
+        player2Yatzy.onclick = setplayer2Yatzy;
+
+        player1UpSum.onclick = setplayer1UpSum;
+        player2UpSum.onclick = setplayer2UpSum;
+        player1Sum.onclick = setplayer1Sum;
+        player2Sum.onclick = setplayer2Sum;
+
+    </script>
+</body>
+</html>
